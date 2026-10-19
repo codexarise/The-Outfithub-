@@ -1,0 +1,1722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0b0b">
+<meta name="description" content="OUTFIT - Trending boys fashion, oversized T-shirts, baggy jeans, cargos and premium streetwear in Dumri, Jharkhand.">
+
+<title>OUTFIT — Wear Your Vibe</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  --bg: #0b0b0b;
+  --card: #151515;
+  --white: #ffffff;
+  --muted: #999999;
+  --line: #292929;
+  --accent: #c8ff00;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: 'Inter', sans-serif;
+}
+
+button, input, select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.container {
+  width: min(1200px, 92%);
+  margin: auto;
+}
+
+/* TOP BAR */
+
+.topbar {
+  background: var(--accent);
+  color: #111;
+  text-align: center;
+  padding: 10px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+/* NAVBAR */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(11,11,11,.95);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(16px);
+}
+
+.nav {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 900;
+  letter-spacing: -2px;
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  font-size: 12px;
+  color: #ddd;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+.nav-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.icon-btn {
+  border: 1px solid var(--line);
+  background: #171717;
+  color: white;
+  padding: 10px 12px;
+  border-radius: 12px;
+  position: relative;
+}
+
+.count {
+  color: var(--accent);
+  font-weight: 800;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 540px;
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  align-items: center;
+  gap: 35px;
+  padding-top: 50px;
+  padding-bottom: 55px;
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: 800;
+  margin-bottom: 22px;
+}
+
+.hero h1 {
+  font-size: clamp(52px, 8vw, 94px);
+  line-height: .94;
+  letter-spacing: -6px;
+  font-weight: 900;
+}
+
+.hero h1 span {
+  color: var(--accent);
+}
+
+.hero p {
+  color: #aaa;
+  font-size: 14px;
+  line-height: 1.9;
+  margin: 25px 0;
+  max-width: 420px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 22px;
+  border-radius: 7px;
+  border: 1px solid var(--accent);
+  background: var(--accent);
+  color: #111;
+  font-size: 12px;
+  font-weight: 900;
+  transition: .25s;
+}
+
+.btn:hover {
+  background: transparent;
+  color: var(--accent);
+}
+
+.btn-outline {
+  background: transparent;
+  color: white;
+  border-color: #444;
+  margin-left: 8px;
+}
+
+.hero-image {
+  height: 440px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #222;
+}
+
+.hero-image img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(.8);
+}
+
+.hero-badge {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  padding: 17px;
+  background: rgba(0,0,0,.72);
+  border: 1px solid #555;
+  backdrop-filter: blur(12px);
+  border-radius: 9px;
+}
+
+.hero-badge small {
+  color: var(--accent);
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.hero-badge h3 {
+  margin-top: 6px;
+  font-size: 20px;
+}
+
+/* BENEFITS */
+
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 24px 0;
+  gap: 20px;
+}
+
+.benefit {
+  text-align: center;
+}
+
+.benefit strong {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 7px;
+}
+
+.benefit small {
+  color: var(--muted);
+  font-size: 10px;
+}
+
+/* SECTION */
+
+section.products-section {
+  padding: 80px 0;
+}
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.section-head h2 {
+  font-size: clamp(28px, 5vw, 43px);
+  letter-spacing: -2px;
+}
+
+.section-head p {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.section-label {
+  color: var(--accent);
+  font-size: 10px;
+  letter-spacing: 3px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+/* SEARCH */
+
+.search-wrap {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.search-wrap input {
+  width: 100%;
+  min-width: 0;
+  background: #151515;
+  color: white;
+  border: 1px solid var(--line);
+  outline: none;
+  border-radius: 8px;
+  padding: 14px;
+  font-size: 12px;
+}
+
+.search-wrap input:focus {
+  border-color: var(--accent);
+}
+
+/* FILTERS */
+
+.filters {
+  display: flex;
+  gap: 9px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  margin-bottom: 25px;
+  scrollbar-width: thin;
+}
+
+.filter {
+  white-space: nowrap;
+  padding: 11px 17px;
+  border: 1px solid #333;
+  border-radius: 30px;
+  background: transparent;
+  color: #bbb;
+  font-size: 11px;
+}
+
+.filter.active,
+.filter:hover {
+  background: var(--accent);
+  color: #111;
+  border-color: var(--accent);
+  font-weight: 800;
+}
+
+/* PRODUCTS GRID */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 20px;
+}
+
+.product-card {
+  background: var(--card);
+  border: 1px solid #222;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform .25s, border-color .25s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  border-color: #555;
+}
+
+.product-image {
+  height: 250px;
+  background: #222;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-image img {
+  height: 100%;
+  object-fit: cover;
+  transition: transform .4s;
+}
+
+.product-card:hover .product-image img {
+  transform: scale(1.06);
+}
+
+.tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: var(--accent);
+  color: #111;
+  font-size: 9px;
+  font-weight: 900;
+  padding: 7px 9px;
+  border-radius: 4px;
+}
+
+.wish {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: rgba(0,0,0,.75);
+  border: 1px solid #444;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  color: white;
+  font-size: 18px;
+}
+
+.wish.active {
+  color: #ff5675;
+}
+
+.product-info {
+  padding: 15px;
+}
+
+.product-category {
+  font-size: 9px;
+  color: var(--muted);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.product-name {
+  font-size: 13px;
+  font-weight: 700;
+  margin: 9px 0;
+  min-height: 32px;
+}
+
+.price-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.old-price {
+  color: #777;
+  text-decoration: line-through;
+  font-size: 11px;
+}
+
+.add-btn {
+  width: 100%;
+  background: transparent;
+  border: 1px solid #444;
+  color: white;
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.add-btn:hover {
+  background: var(--accent);
+  color: #111;
+  border-color: var(--accent);
+}
+
+.empty {
+  grid-column: 1/-1;
+  text-align: center;
+  padding: 50px 10px;
+  color: #aaa;
+}
+
+/* PROMO */
+
+.promo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid #292929;
+  border-radius: 15px;
+  overflow: hidden;
+  background: #131313;
+  margin-bottom: 70px;
+}
+
+.promo-content {
+  padding: 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.promo-content h2 {
+  font-size: clamp(30px, 5vw, 55px);
+  line-height: 1;
+  letter-spacing: -3px;
+}
+
+.promo-content p {
+  color: #aaa;
+  font-size: 12px;
+  line-height: 1.9;
+  margin: 20px 0;
+}
+
+.promo img {
+  height: 360px;
+  object-fit: cover;
+}
+
+/* STORE */
+
+.store {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+  border-top: 1px solid var(--line);
+  padding: 55px 0;
+}
+
+.store h2 {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.store p {
+  color: #aaa;
+  font-size: 13px;
+  line-height: 1.9;
+  margin-bottom: 20px;
+}
+
+.map-box {
+  min-height: 230px;
+  border: 1px solid #333;
+  border-radius: 12px;
+  background: #151515;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 25px;
+}
+
+.map-box .pin {
+  font-size: 40px;
+  margin-bottom: 12px;
+}
+
+/* FOOTER */
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 35px 0;
+  color: #999;
+  font-size: 11px;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+footer strong {
+  color: white;
+}
+
+/* DRAWER + MODAL */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(0,0,0,.75);
+  opacity: 0;
+  visibility: hidden;
+  transition: .25s;
+}
+
+.overlay.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  right: -440px;
+  z-index: 201;
+  width: min(410px,100%);
+  height: 100%;
+  background: #111;
+  border-left: 1px solid #333;
+  padding: 24px;
+  transition: right .3s;
+  overflow-y: auto;
+}
+
+.drawer.show {
+  right: 0;
+}
+
+.drawer-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #333;
+  padding-bottom: 18px;
+  margin-bottom: 20px;
+}
+
+.close-btn {
+  background: #222;
+  border: 1px solid #444;
+  color: white;
+  padding: 9px 12px;
+  border-radius: 7px;
+}
+
+.cart-item {
+  display: grid;
+  grid-template-columns: 65px 1fr auto;
+  gap: 12px;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid #292929;
+}
+
+.cart-item img {
+  height: 70px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.cart-item h4 {
+  font-size: 12px;
+  margin-bottom: 7px;
+}
+
+.cart-item p {
+  color: var(--accent);
+  font-size: 12px;
+}
+
+.qty {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.qty button {
+  background: #222;
+  color: white;
+  border: 1px solid #444;
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+
+.remove {
+  background: transparent;
+  border: 0;
+  color: #ff697b;
+  font-size: 11px;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  font-weight: 800;
+}
+
+.full-btn {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: none;
+  overflow-y: auto;
+  background: rgba(0,0,0,.82);
+  padding: 25px 12px;
+}
+
+.modal.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-box {
+  width: min(480px,100%);
+  background: #151515;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 25px;
+  margin: auto;
+}
+
+.modal-box h2 {
+  font-size: 25px;
+  margin: 15px 0 8px;
+}
+
+.modal-box > p {
+  color: #999;
+  font-size: 12px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin: 14px 0;
+}
+
+.form-group label {
+  display: block;
+  color: #ccc;
+  font-size: 11px;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #383838;
+  background: #0d0d0d;
+  color: white;
+  border-radius: 6px;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: var(--accent);
+}
+
+.notice {
+  font-size: 10px;
+  color: #888;
+  line-height: 1.7;
+  margin-top: 14px;
+}
+
+.success {
+  color: var(--accent);
+  text-align: center;
+  padding: 20px 0;
+}
+
+.toast {
+  position: fixed;
+  bottom: 25px;
+  left: 50%;
+  transform: translate(-50%,100px);
+  opacity: 0;
+  z-index: 500;
+  background: var(--accent);
+  color: #111;
+  padding: 14px 22px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 800;
+  transition: .3s;
+  width: max-content;
+  max-width: 90%;
+  text-align: center;
+}
+
+.toast.show {
+  transform: translate(-50%,0);
+  opacity: 1;
+}
+
+/* MOBILE */
+
+@media(max-width:900px) {
+  .grid {
+    grid-template-columns: repeat(3,1fr);
+    gap: 13px;
+  }
+
+  .product-image {
+    height: 220px;
+  }
+
+  .nav-links {
+    gap: 12px;
+  }
+
+  .hero h1 {
+    letter-spacing: -4px;
+  }
+}
+
+@media(max-width:650px) {
+  .nav {
+    min-height: 65px;
+  }
+
+  .logo {
+    font-size: 25px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 38px;
+    gap: 30px;
+  }
+
+  .hero h1 {
+    font-size: 67px;
+  }
+
+  .hero-image {
+    height: 380px;
+  }
+
+  .benefits {
+    gap: 10px;
+  }
+
+  .benefit strong {
+    font-size: 10px;
+  }
+
+  .benefit small {
+    font-size: 9px;
+  }
+
+  section.products-section {
+    padding: 55px 0;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 12px;
+  }
+
+  .product-image {
+    height: 210px;
+  }
+
+  .product-info {
+    padding: 11px;
+  }
+
+  .product-name {
+    font-size: 12px;
+  }
+
+  .price {
+    font-size: 14px;
+  }
+
+  .promo {
+    grid-template-columns: 1fr;
+  }
+
+  .promo-content {
+    padding: 30px 23px;
+  }
+
+  .promo img {
+    height: 270px;
+    grid-row: 1;
+  }
+
+  .store {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .section-head {
+    align-items: start;
+  }
+
+  .btn-outline {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+@media(max-width:370px) {
+  .hero h1 {
+    font-size: 53px;
+  }
+
+  .product-image {
+    height: 175px;
+  }
+
+  .nav-actions {
+    gap: 5px;
+  }
+
+  .icon-btn {
+    padding: 9px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+  NEW SEASON • NEW STYLE • YOUR VIBE
+</div>
+
+<header>
+  <div class="container nav">
+    <a href="#" class="logo">Out<span>Fithub.</span></a>
+
+    <nav class="nav-links">
+      <a href="#home">HOME</a>
+      <a href="#shop">SHOP</a>
+      <a href="#trending">TRENDING</a>
+      <a href="#store">STORE</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="icon-btn" onclick="showWishlist()" aria-label="Wishlist">
+        ♥ <span class="count" id="wishCount">0</span>
+      </button>
+      <button class="icon-btn" onclick="openCart()" aria-label="Shopping cart">
+        🛍 <span class="count" id="cartCount">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section class="container hero" id="home">
+  <div>
+    <div class="eyebrow">YOUR STYLE. YOUR RULES.</div>
+
+    <h1>WEAR<br>YOUR<br><span>VIBE.</span></h1>
+
+    <p>
+      Upgrade your everyday look with the latest streetwear,
+      oversized tees, baggy jeans and fits that speak for you.
+    </p>
+
+    <a href="#shop" class="btn">EXPLORE COLLECTION ↗</a>
+    <a href="#store" class="btn btn-outline">OUR STORE</a>
+  </div>
+
+  <div class="hero-image">
+    <img
+      src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?auto=format&fit=crop&w=900&q=85"
+      alt="Modern streetwear fashion"
+    >
+
+    <div class="hero-badge">
+      <small>THE NEW DROP</small>
+      <h3>Streetwear Essentials.</h3>
+    </div>
+  </div>
+</section>
+
+<div class="container benefits">
+  <div class="benefit">
+    <strong>✦ TRENDING STYLES</strong>
+    <small>Fresh looks, every season</small>
+  </div>
+  <div class="benefit">
+    <strong>✦ EASY SHOPPING</strong>
+    <small>Choose your favorite fits</small>
+  </div>
+  <div class="benefit">
+    <strong>✦ LOCAL STORE</strong>
+    <small>Dumri, Jharkhand</small>
+  </div>
+</div>
+
+<section class="products-section" id="shop">
+  <div class="container">
+
+    <div class="section-head">
+      <div>
+        <div class="section-label">THE COLLECTION</div>
+        <h2>Find Your Fit.</h2>
+        <p>Everyday essentials. Standout looks.</p>
+      </div>
+    </div>
+
+    <div class="search-wrap">
+      <input
+        id="searchInput"
+        type="search"
+        placeholder="Search T-shirts, jeans, cargos..."
+        oninput="renderProducts()"
+      >
+    </div>
+
+    <div class="filters" id="filters">
+      <button class="filter active" onclick="setCategory('All',this)">All Products</button>
+      <button class="filter" onclick="setCategory('T-Shirts',this)">T-Shirts</button>
+      <button class="filter" onclick="setCategory('Jeans',this)">Baggy Jeans</button>
+      <button class="filter" onclick="setCategory('Cargos',this)">Cargos</button>
+      <button class="filter" onclick="setCategory('Shirts',this)">Shirts</button>
+      <button class="filter" onclick="setCategory('Jackets',this)">Jackets</button>
+      <button class="filter" onclick="setCategory('Footwear',this)">Footwear</button>
+    </div>
+
+    <div class="grid" id="productGrid"></div>
+  </div>
+</section>
+
+<section class="container" id="trending">
+  <div class="promo">
+    <div class="promo-content">
+      <div class="section-label">THE STREETWEAR EDIT</div>
+      <h2>LESS BASIC.<br>MORE YOU.</h2>
+      <p>
+        Build your fit with oversized layers, relaxed silhouettes
+        and clean everyday essentials.
+      </p>
+      <a href="#shop" class="btn">SHOP THE LOOK ↗</a>
+    </div>
+
+    <img
+      src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=85"
+      alt="Street style fashion inspiration"
+      loading="lazy"
+    >
+  </div>
+</section>
+
+<section class="container store" id="store">
+  <div>
+    <div class="section-label">COME SAY HELLO</div>
+    <h2>Find Our Store.</h2>
+    <p>
+      Looking for your next favorite outfit?<br>
+      Visit our local store.
+    </p>
+
+    <p>
+      📍 <strong>OUTFIT — Boys Fashion</strong><br>
+      Dumri, near P.N. College,<br>
+      Jharkhand, India.
+    </p>
+
+    <a
+      class="btn"
+      href="https://maps.app.goo.gl/xYrSZTun3SKPoesi7?g_st=aw"
+      target="_blank"
+      rel="noopener"
+    >
+      OPEN IN GOOGLE MAPS ↗
+    </a>
+  </div>
+
+  <div class="map-box">
+    <div class="pin">📍</div>
+    <h3>OUTFIT STORE</h3>
+    <p style="margin:10px 0 0">
+      Dumri, near P.N. College<br>
+      Jharkhand, India
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container footer-row">
+    <div class="logo">OUT<span style="color:var(--accent)">FIT.</span></div>
+    <p>Wear Your Vibe. © <span id="year"></span> OUTFITHUB.</p>
+    <p>Made for the next generation.</p>
+  </div>
+</footer>
+
+<!-- CART DRAWER -->
+
+<div class="overlay" id="overlay" onclick="closeCart()"></div>
+
+<aside class="drawer" id="cartDrawer">
+  <div class="drawer-head">
+    <h3>Your Bag 🛍</h3>
+    <button class="close-btn" onclick="closeCart()">✕</button>
+  </div>
+
+  <div id="cartItems"></div>
+
+  <div class="cart-total">
+    <span>Total</span>
+    <span id="cartTotal">₹0</span>
+  </div>
+
+  <button class="btn full-btn" onclick="checkout()">PROCEED TO CHECKOUT ↗</button>
+  <button class="add-btn full-btn" onclick="closeCart()">CONTINUE SHOPPING</button>
+
+  <p class="notice">
+    Demo store: products and cart are stored in this browser.
+    Orders are not sent to a real store automatically.
+  </p>
+</aside>
+
+<!-- CHECKOUT MODAL -->
+
+<div class="modal" id="checkoutModal">
+  <div class="modal-box">
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <div class="section-label">YOUR ORDER</div>
+      <button class="close-btn" onclick="closeCheckout()">✕</button>
+    </div>
+
+    <h2>Checkout.</h2>
+    <p>Enter your details to prepare your order.</p>
+
+    <div id="checkoutContent">
+      <form id="checkoutForm">
+
+        <div class="form-group">
+          <label for="customerName">Full Name *</label>
+          <input id="customerName" required maxlength="80" placeholder="Your name">
+        </div>
+
+        <div class="form-group">
+          <label for="customerPhone">Mobile Number *</label>
+          <input
+            id="customerPhone"
+            type="tel"
+            required
+            pattern="[6-9][0-9]{9}"
+            maxlength="10"
+            inputmode="numeric"
+            placeholder="10-digit mobile number"
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="customerAddress">Delivery Address *</label>
+          <textarea
+            id="customerAddress"
+            required
+            maxlength="400"
+            rows="3"
+            placeholder="Village, area, landmark, PIN code"
+            style="width:100%;padding:13px;background:#0d0d0d;color:white;border:1px solid #383838;border-radius:6px;resize:vertical"
+          ></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="paymentMethod">Payment Method</label>
+          <select id="paymentMethod">
+            <option value="Cash on Delivery">Cash on Delivery</option>
+          </select>
+        </div>
+
+        <div class="cart-total">
+          <span>Order Total</span>
+          <span id="checkoutTotal">₹0</span>
+        </div>
+
+        <button type="submit" class="btn full-btn">
+          PREPARE DEMO ORDER
+        </button>
+
+        <p class="notice">
+          Demo only. This page does not transmit your personal details
+          to a seller, verify stock, or create a real order.
+        </p>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* =========================================
+   OUTFIT — BOYS FASHION STORE
+   FRONTEND DEMO
+========================================= */
+
+const products = [
+  {
+    id: 1,
+    name: "Oversized Black Tee",
+    category: "T-Shirts",
+    price: 499,
+    oldPrice: 799,
+    tag: "BESTSELLER",
+    image: "photo-1521572163474-6864f9cf17ab"
+  },
+  {
+    id: 2,
+    name: "Classic White Tee",
+    category: "T-Shirts",
+    price: 399,
+    oldPrice: 599,
+    tag: "POPULAR",
+    image: "photo-1503341504253-dff4815485f1"
+  },
+  {
+    id: 3,
+    name: "Relaxed Baggy Jeans",
+    category: "Jeans",
+    price: 1199,
+    oldPrice: 1599,
+    tag: "TRENDING",
+    image: "photo-1542272604-787c3835535d"
+  },
+  {
+    id: 4,
+    name: "Urban Cargo Pants",
+    category: "Cargos",
+    price: 999,
+    oldPrice: 1399,
+    tag: "NEW DROP",
+    image: "photo-1517438476312-10d79c077509"
+  },
+  {
+    id: 5,
+    name: "Casual Overshirt",
+    category: "Shirts",
+    price: 799,
+    oldPrice: 1099,
+    tag: "POPULAR",
+    image: "photo-1598033129183-c4f50c736f10"
+  },
+  {
+    id: 6,
+    name: "Streetwear Jacket",
+    category: "Jackets",
+    price: 1499,
+    oldPrice: 1999,
+    tag: "TRENDING",
+    image: "photo-1551028719-00167b16eac5"
+  },
+  {
+    id: 7,
+    name: "Everyday Sneakers",
+    category: "Footwear",
+    price: 1299,
+    oldPrice: 1799,
+    tag: "POPULAR",
+    image: "photo-1542291026-7eec264c27ff"
+  },
+  {
+    id: 8,
+    name: "Minimal Street Shirt",
+    category: "Shirts",
+    price: 699,
+    oldPrice: 999,
+    tag: "NEW",
+    image: "photo-1603252109303-2751441dd157"
+  }
+];
+
+let activeCategory = "All";
+let wishlist = JSON.parse(localStorage.getItem("outfitWishlist") || "[]");
+let cart = JSON.parse(localStorage.getItem("outfitCart") || "[]");
+let wishlistMode = false;
+
+const money = amount =>
+  "₹" + amount.toLocaleString("en-IN");
+
+function imageURL(id) {
+  return `https://images.unsplash.com/${id}?auto=format&fit=crop&w=600&q=80`;
+}
+
+function saveState() {
+  localStorage.setItem("outfitWishlist", JSON.stringify(wishlist));
+  localStorage.setItem("outfitCart", JSON.stringify(cart));
+}
+
+function showToast(message) {
+  const toast = document.getElementById("toast");
+  toast.textContent = message;
+  toast.classList.add("show");
+
+  clearTimeout(window.toastTimer);
+
+  window.toastTimer = setTimeout(() => {
+    toast.classList.remove("show");
+  }, 2300);
+}
+
+function renderProducts() {
+  const query = document
+    .getElementById("searchInput")
+    .value.toLowerCase()
+    .trim();
+
+  const filtered = products.filter(product => {
+    const categoryMatch =
+      activeCategory === "All" ||
+      product.category === activeCategory;
+
+    const searchMatch =
+      product.name.toLowerCase().includes(query) ||
+      product.category.toLowerCase().includes(query);
+
+    const wishlistMatch =
+      !wishlistMode || wishlist.includes(product.id);
+
+    return categoryMatch && searchMatch && wishlistMatch;
+  });
+
+  const grid = document.getElementById("productGrid");
+
+  if (!filtered.length) {
+    grid.innerHTML = `
+      <div class="empty">
+        <h3>No products found 😕</h3>
+        <p style="margin-top:10px">Try another search or category.</p>
+      </div>
+    `;
+    return;
+  }
+
+  grid.innerHTML = filtered.map(product => `
+    <article class="product-card">
+
+      <div class="product-image">
+        <img
+          src="${imageURL(product.image)}"
+          alt="${product.name}"
+          loading="lazy"
+        >
+
+        <span class="tag">${product.tag}</span>
+
+        <button
+          class="wish ${wishlist.includes(product.id) ? "active" : ""}"
+          onclick="toggleWishlist(${product.id})"
+          aria-label="Add ${product.name} to wishlist"
+        >${wishlist.includes(product.id) ? "♥" : "♡"}</button>
+      </div>
+
+      <div class="product-info">
+        <div class="product-category">${product.category}</div>
+
+        <h3 class="product-name">${product.name}</h3>
+
+        <div class="price-row">
+          <span class="price">${money(product.price)}</span>
+          <span class="old-price">${money(product.oldPrice)}</span>
+        </div>
+
+        <button
+          class="add-btn"
+          onclick="addToCart(${product.id})"
+        >ADD TO BAG +</button>
+      </div>
+
+    </article>
+  `).join("");
+}
+
+function setCategory(category, button) {
+  activeCategory = category;
+  wishlistMode = false;
+
+  document.querySelectorAll(".filter").forEach(item => {
+    item.classList.remove("active");
+  });
+
+  button.classList.add("active");
+  renderProducts();
+}
+
+function toggleWishlist(id) {
+  if (wishlist.includes(id)) {
+    wishlist = wishlist.filter(item => item !== id);
+    showToast("Removed from wishlist");
+  } else {
+    wishlist.push(id);
+    showToast("Added to wishlist ♥");
+  }
+
+  saveState();
+  updateCounts();
+  renderProducts();
+}
+
+function showWishlist() {
+  wishlistMode = !wishlistMode;
+  activeCategory = "All";
+
+  document.querySelectorAll(".filter").forEach(item => {
+    item.classList.toggle(
+      "active",
+      item.textContent.trim() === "All Products" && !wishlistMode
+    );
+  });
+
+  document.getElementById("searchInput").value = "";
+
+  renderProducts();
+
+  document.getElementById("shop").scrollIntoView({
+    behavior: "smooth"
+  });
+
+  if (wishlistMode) {
+    showToast("Showing your wishlist ♥");
+  }
+}
+
+function addToCart(id) {
+  const existing = cart.find(item => item.id === id);
+
+  if (existing) {
+    existing.quantity++;
+  } else {
+    cart.push({ id, quantity: 1 });
+  }
+
+  saveState();
+  updateCounts();
+  renderCart();
+  showToast("Added to your bag 🛍");
+}
+
+function changeQuantity(id, change) {
+  const item = cart.find(item => item.id === id);
+
+  if (!item) return;
+
+  item.quantity += change;
+
+  if (item.quantity <= 0) {
+    cart = cart.filter(item => item.id !== id);
+  }
+
+  saveState();
+  updateCounts();
+  renderCart();
+}
+
+function removeFromCart(id) {
+  cart = cart.filter(item => item.id !== id);
+
+  saveState();
+  updateCounts();
+  renderCart();
+
+  showToast("Item removed");
+}
+
+function updateCounts() {
+  const totalItems = cart.reduce(
+    (sum, item) => sum + item.quantity,
+    0
+  );
+
+  document.getElementById("cartCount").textContent = totalItems;
+  document.getElementById("wishCount").textContent = wishlist.length;
+}
+
+function getCartTotal() {
+  return cart.reduce((sum, item) => {
+    const product = products.find(p => p.id === item.id);
+
+    return sum + (
+      product ? product.price * item.quantity : 0
+    );
+  }, 0);
+}
+
+function renderCart() {
+  const container = document.getElementById("cartItems");
+
+  if (!cart.length) {
+    container.innerHTML = `
+      <div class="empty">
+        <div style="font-size:40px">🛍</div>
+        <h3 style="margin-top:15px">Your bag is empty</h3>
+        <p style="margin-top:10px;font-size:12px">
+          Find something that matches your vibe.
+        </p>
+      </div>
+    `;
+  } else {
+    container.innerHTML = cart.map(item => {
+      const product = products.find(p => p.id === item.id);
+
+      if (!product) return "";
+
+      return `
+        <div class="cart-item">
+          <img src="${imageURL(product.image)}" alt="${product.name}">
+
+          <div>
+            <h4>${product.name}</h4>
+            <p>${money(product.price * item.quantity)}</p>
+
+            <div class="qty">
+              <button onclick="changeQuantity(${product.id},-1)">−</button>
+              <span>${item.quantity}</span>
+              <button onclick="changeQuantity(${product.id},1)">+</button>
+            </div>
+          </div>
+
+          <button
+            class="remove"
+            onclick="removeFromCart(${product.id})"
+          >Remove</button>
+        </div>
+      `;
+    }).join("");
+  }
+
+  document.getElementById("cartTotal").textContent =
+    money(getCartTotal());
+
+  document.getElementById("checkoutTotal").textContent =
+    money(getCartTotal());
+}
+
+function openCart() {
+  renderCart();
+
+  document.getElementById("overlay").classList.add("show");
+  document.getElementById("cartDrawer").classList.add("show");
+
+  document.body.style.overflow = "hidden";
+}
+
+function closeCart() {
+  document.getElementById("overlay").classList.remove("show");
+  document.getElementById("cartDrawer").classList.remove("show");
+
+  document.body.style.overflow = "";
+}
+
+function checkout() {
+  if (!cart.length) {
+    showToast("Your bag is empty!");
+    return;
+  }
+
+  closeCart();
+
+  document.getElementById("checkoutModal").classList.add("show");
+  document.body.style.overflow = "hidden";
+
+  renderCart();
+}
+
+function closeCheckout() {
+  document.getElementById("checkoutModal").classList.remove("show");
+  document.body.style.overflow = "";
+}
+
+document.getElementById("checkoutForm").addEventListener(
+  "submit",
+  function(event) {
+    event.preventDefault();
+
+    if (!cart.length) {
+      showToast("Your bag is empty!");
+      closeCheckout();
+      return;
+    }
+
+    const name = document.getElementById("customerName").value.trim();
+
+    const phone = document.getElementById("customerPhone").value.trim();
+
+    const address = document.getElementById("customerAddress").value.trim();
+
+    if (!name || !address || !/^[6-9]\d{9}$/.test(phone)) {
+      showToast("Please check your details.");
+      return;
+    }
+
+    const orderNumber =
+      "OF" + Date.now().toString().slice(-8);
+
+    const orderTotal = getCartTotal();
+
+    const orderLines = cart.map(item => {
+      const product = products.find(p => p.id === item.id);
+
+      return product
+        ? `${product.name} x ${item.quantity}`
+        : "";
+    }).filter(Boolean);
+
+    document.getElementById("checkoutContent").innerHTML = `
+      <div class="success">
+        <div style="font-size:48px">✓</div>
+
+        <h2>Demo Order Prepared!</h2>
+
+        <p style="margin-top:15px;color:#aaa;line-height:1.9">
+          Demo Reference: <strong>${orderNumber}</strong><br>
+          Name: ${escapeHTML(name)}<br>
+          Items: ${orderLines.map(escapeHTML).join(", ")}<br>
+          Total: <strong>${money(orderTotal)}</strong><br>
+          Payment: Cash on Delivery
+        </p>
+
+        <p style="margin-top:20px;color:#ffcf70;font-size:12px;line-height:1.8">
+          This is only a browser demo. No real order has been placed
+          and the store has not received your details.
+        </p>
+
+        <button class="btn full-btn" onclick="finishDemoOrder()">
+          CONTINUE SHOPPING
+        </button>
+      </div>
+    `;
+
+    // No personal details are transmitted or stored.
+  }
+);
+
+function escapeHTML(value) {
+  return String(value).replace(/[&<>"']/g, character => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#39;"
+  })[character]);
+}
+
+function finishDemoOrder() {
+  cart = [];
+
+  saveState();
+  updateCounts();
+  renderCart();
+
+  closeCheckout();
+
+  // Reset checkout form for the next demo.
+  document.getElementById("checkoutContent").innerHTML = `
+    <form id="checkoutForm">
+      <div class="form-group">
+        <label for="customerName">Full Name *</label>
+        <input id="customerName" required maxlength="80" placeholder="Your name">
+      </div>
+      <div class="form-group">
+        <label for="customerPhone">Mobile Number *</label>
+        <input id="customerPhone" type="tel" required pattern="[6-9][0-9]{9}" maxlength="10" inputmode="numeric" placeholder="10-digit mobile number">
+      </div>
+      <div class="form-group">
+        <label for="customerAddress">Delivery Address *</label>
+        <textarea id="customerAddress" required maxlength="400" rows="3" placeholder="Village, area, landmark, PIN code" style="width:100%;padding:13px;background:#0d0d0d;color:white;border:1px solid #383838;border-radius:6px;resize:vertical"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="paymentMethod">Payment Method</label>
+        <select id="paymentMethod"><option value="Cash on Delivery">Cash on Delivery</option></select>
+      </div>
+      <div class="cart-total"><span>Order Total</span><span id="checkoutTotal">₹0</span></div>
+      <button type="submit" class="btn full-btn">PREPARE DEMO ORDER</button>
+      <p class="notice">Demo only. No real order or payment is processed.</p>
+    </form>
+  `;
+
+  // Reattach submit handler after resetting the form.
+  document.getElementById("checkoutForm").addEventListener(
+    "submit",
+    function(event) {
+      event.preventDefault();
+
+      if (!cart.length) {
+        showToast("Add products to your bag first!");
+        closeCheckout();
+        return;
+      }
+
+      showToast("Please reopen checkout to prepare your order.");
+    }
+  );
+
+  showToast("Thanks for visiting OUTFIT! ✨");
+}
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+document.getElementById("checkoutModal").addEventListener(
+  "click",
+  function(event) {
+    if (event.target === this) closeCheckout();
+  }
+);
+
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Escape") {
+    closeCart();
+    closeCheckout();
+  }
+});
+
+renderProducts();
+renderCart();
+updateCounts();
+</script>
+
+</body>
+</html>
